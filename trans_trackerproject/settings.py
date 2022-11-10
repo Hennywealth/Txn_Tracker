@@ -85,7 +85,7 @@ DATABASES = {
         'ENGINE': 'djongo',
         'NAME': 'transtracker_db',
         'CLIENT' : {
-            'host': 'mongodb+srv://Eniwealth:<456736251>@atlascluster.hu6cuir.mongodb.net/?retryWrites=true&w=majority',
+            'host': 'mongodb+srv://Eniwealth:456736251@atlascluster.hu6cuir.mongodb.net/?retryWrites=true&w=majority',
         }
      
         }
