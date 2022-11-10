@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     # 'rest_framework',
     'trans_trackerapp.apps.TransTrackerappConfig',
     # 'corsheaders',
-    # 'django_celery_results'
+    'django_celery_results'
 ]
 
 MIDDLEWARE = [
@@ -137,12 +137,12 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CORS_ORIGIN_ALLOW_ALL = False
-CORS_ORIGIN_WHITELIST = (
-    'http://localhost:8081',
-)
+# CORS_ORIGIN_ALLOW_ALL = False
+# CORS_ORIGIN_WHITELIST = (
+#     'http://localhost:8081',
+# )
 
-CELERY_BROKER_URL = 'redis://127.0.0.1:6379'
+CELERY_BROKER_URL = 'redis://:p89d0727ff313d3c6b46b9faf7503a6cdf12ed107bef69b9d9e8c4da1d73d8580@ec2-44-208-115-228.compute-1.amazonaws.com:19520'
 ACCEPT_CONTENT = ['application/json']
 RESULT_SERIALIZER = 'json'
 TASK_SERIALIZER =  'json'
