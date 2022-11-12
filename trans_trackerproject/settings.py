@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     # 'rest_framework',
     'trans_trackerapp.apps.TransTrackerappConfig',
     # 'corsheaders',
-    'django_celery_results'
+    # 'django_celery_results'
 ]
 
 MIDDLEWARE = [
@@ -84,11 +84,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'djongo',
         'NAME': 'transtracker_db',
-        'ENFORCE_SCHEMA': False,
+        'ENFORCE_SCHEMA': True,
         'CLIENT' : {
             'host': 'mongodb+srv://Eniwealth:456736251@atlascluster.hu6cuir.mongodb.net/?retryWrites=true&w=majority',
         }
-     
         }
     }
 
