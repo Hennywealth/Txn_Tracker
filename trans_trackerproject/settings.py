@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     # 'rest_framework',
     'trans_trackerapp.apps.TransTrackerappConfig',
     # 'corsheaders',
-    # 'django_celery_results'
+    'django_celery_results'
 ]
 
 MIDDLEWARE = [
