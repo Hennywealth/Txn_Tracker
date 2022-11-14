@@ -68,7 +68,7 @@ virtualenv==20.16.5
 virtualenv-clone==0.5.7
 wcwidth==0.2.5
 web3==5.31.0
-websockets==10.4
+websockets==9.1
 whitenoise==6.2.0
 wrapt==1.14.1
 yarl==1.8.1
