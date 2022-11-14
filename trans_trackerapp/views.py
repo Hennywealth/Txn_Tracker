@@ -18,7 +18,7 @@ def test(request):
         new_data.save()
         return HttpResponse('Done')
         
-    return None
+    return HttpResponse('Start Celery Application')
 
 # def handle_event(event):
 #     print(event)
