@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -141,9 +142,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #     'http://localhost:8081',
 # )
 
-CELERY_BROKER_URL = 'redis://:p89d0727ff313d3c6b46b9faf7503a6cdf12ed107bef69b9d9e8c4da1d73d8580@ec2-44-208-115-228.compute-1.amazonaws.com:19520'
+CELERY_BROKER_URL = os.environ['REDIS_URL']
+CELERY_RESULT_BACKEND = os.environ['REDIS_URL']
 ACCEPT_CONTENT = ['application/json']
 RESULT_SERIALIZER = 'json'
 TASK_SERIALIZER =  'json'
 TIMEZONE = 'Africa/Lagos'
 RESULT_BACKEND = 'django-db'
+
+
