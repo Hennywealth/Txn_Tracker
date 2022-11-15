@@ -8,6 +8,7 @@ bsc = "wss://ws-nd-256-341-637.p2pify.com/0ebd6247159bb3dca20ed01a839a3551"
 # bsc = "wss://bsc.getblock.io/testnet/"
 w3 = Web3(Web3.WebsocketProvider(bsc))
 
+print(w3.isconnected())
 
 @shared_task(bind=True)
 def log_loop(self,  event_filter, poll_interval):
@@ -32,11 +33,11 @@ def log_loop(self,  event_filter, poll_interval):
                 if len(list(res)) > 0:  
                     # url = 'http://127.0.0.1:8000/'
                     my_obj = data["hash"]
-                    # requests.post(url, json = my_obj)
-                    # password = data["hash"].hex()
+                    
                 
                     print("Address found", data['to'])
-                    
+                # requests.post(url, json = my_obj)
+                # password = data["hash"].hex()
                     print(my_obj)
 
                 else:

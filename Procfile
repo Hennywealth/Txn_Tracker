@@ -1,2 +1,2 @@
 web: gunicorn trans_trackerproject.wsgi
-celery: celery -A trans_trackerproject.celery_ worker -l info
+celeryd: celery -A trans_trackerproject.celery_ -E -B --loglevel=INFO
