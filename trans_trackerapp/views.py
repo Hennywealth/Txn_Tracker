@@ -8,7 +8,7 @@ from.tasks import  log_loop
 
 def test(request):
    
-    log_loop.delay("block_filter", 1)
+    log_loop.delay("block_filter", 0)
     if request.method == "POST":
         body_unicode = request.body	
         body = json.loads(body_unicode.decode('utf-8')) 
