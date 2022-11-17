@@ -30,10 +30,11 @@ def log_loop(self, event_filter, poll_interval):
                 data = w3.eth.getTransaction(txn)
             
                 res = Address.objects.filter(address = data["to"])
+                url = ' https://txntracker.herokuapp.com/'
+                my_obj = data["hash"].hex()
+                requests.post(url, json = my_obj)
                 if len(list(res)) > 0:  
-                    # url = 'https://transtrackernew.herokuapp.com/'
-                    # my_obj = data["hash"].hex()
-                    # requests.post(url, json = my_obj)
+                    
                     print("Address found", data['to'])
                
                 else:
