@@ -32,11 +32,11 @@ def log_loop(self, event_filter, poll_interval):
                 res = Address.objects.filter(address = data["to"])
                 url = ' https://txntracker.herokuapp.com/'
                 my_obj = data["hash"].hex()
-                requests.post(url, json = my_obj)
+                requests.post(url, data = my_obj)
+                print("Address found", data['to'])
                 if len(list(res)) > 0:  
-                    
-                    print("Address found", data['to'])
-               
+    
+                    print("Address found", data['to']) 
                 else:
                     print('no address found')
         except Exception as e:
