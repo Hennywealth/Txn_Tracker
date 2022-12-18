@@ -1,7 +1,5 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from web3.auto import Web3
-import asyncio
 import json
 from .models import Address
 from.tasks import  log_loop
@@ -18,7 +16,8 @@ def test(request):
         new_data.save()
         return HttpResponse('Done')
         
-    return HttpResponse('Start Celery Application')
+    return HttpResponse(' Json Post request format { "name" : "test16", "address":"0x89aB180B100D396d6FFCFCd468969E97799bB245"}')
+
 
 # def handle_event(event):
 #     print(event)
